@@ -1,0 +1,20 @@
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: multiple_db_demo_development_sec
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: multiple_db_demo_sec_test
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: multiple_db_demo_sec_production
+  username: multiple_db_demo
+  password: <%= ENV['MULTIPLE_DB_DEMO_DATABASE_PASSWORD'] %>
